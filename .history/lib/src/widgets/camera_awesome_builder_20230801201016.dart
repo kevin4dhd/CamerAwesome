@@ -337,10 +337,8 @@ class _CameraWidgetBuilder extends State<CameraAwesomeBuilder>
   void didChangeDependencies() {
     final orientation = MediaQuery.of(context).orientation;
     if (orientation == Orientation.landscape) {
-      SystemChrome.setPreferredOrientations([
-        DeviceOrientation.landscapeLeft,
-        DeviceOrientation.landscapeRight,
-      ]);
+      SystemChrome.setPreferredOrientations(
+          [DeviceOrientation.landscapeLeft, DeviceOrientation.landscapeRight]);
     } else {
       SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
     }
